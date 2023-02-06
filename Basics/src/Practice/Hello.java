@@ -10,7 +10,7 @@ public class Hello {
 		String s = "";
 		for (int i = 65 ; i < 70 ; i++) {
 			
-			s += Integer.toString(i);
+			s += Integer.toString(i) + " ";
 		}
 		System.out.println(s);
 	

@@ -12,6 +12,10 @@ public class ArrayDemo {
 			Array[i] = sc.nextInt();
 		}
 		for (int i : Array) System.out.print(i + " ");
+		
+		sc.nextLine();
+		String s = sc.nextLine();
+		System.out.println(s);
 	}
 
 }
