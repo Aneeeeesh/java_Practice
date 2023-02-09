@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author asoka
- *
- */
-module Basics {
-}
