@@ -14,7 +14,10 @@ public class test {
 		arr[1] = k;
 		arr[2] = C;
 		for (int i = 0 ; i<arr.length ; i++) {
-			arr[i].Work();
+			arr[i].Work();								//here due to overrriding, the same method Work() gives different results
+			//arr[i].Get();
+		Interactable d = new Coin();					//upcasting - here d is an interactable type which stores a coin type
+		Coin f = (Coin)d.Get();							//downcasting - d.Get() returns an Interactable type but it is explicitly converted to a Coin type
 		}
 	}
 }
