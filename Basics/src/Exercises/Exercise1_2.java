@@ -1,49 +1,55 @@
 package Exercises;
+import java.util.*;
 
-import java.util.ArrayList;
 
 public class Exercise1_2 {
 	public static void main(String[] args) {
+	Explorer tab1 = new Explorer();
+	tab1.addUrl("www.google.com");
+	Explorer tab2 = new Explorer();
+	tab2.addUrl("www.yahoo.com");
+	tab2.removeUrl("www.bing.com");
+	tab2.getHistory();
+	}
+}
+
+
+interface BrowserInterface{
+	public void addUrl(String site);
+	public void removeUrl(String rem);
+	public void clearHistory();
+	public void getHistory();
+}
+
+class Explorer implements BrowserInterface{
+	private static ArrayList<String> urls = new ArrayList<String>();
+
+	@Override
+	public void addUrl(String site) {
 		// TODO Auto-generated method stub
-		String s = "www.google.com";
-		Browser1 edge = new Browser1();
-		edge.setVisited(s);
-		edge.getVisited();
-		Browser1 brave = new Browser1();
-		brave.setVisited(s);
-		brave.getVisited();
-		Browser1 opera = new Browser1();
-		opera.setVisited(s);
-		opera.getVisited();
+		urls.add(site);
 	}
 
+	@Override
+	public void removeUrl(String rem) {
+		// TODO Auto-generated method stub
+		if (urls.contains(rem)) 
+			urls.remove(rem); 
+		else System.out.println(rem + " was not found in history");
+	}
+
+	@Override
+	public void clearHistory() {
+		// TODO Auto-generated method stub
+		urls.clear();
+	}
+
+	@Override
+	public void getHistory() {
+		// TODO Auto-generated method stub
+		System.out.println(urls);
+	}
+	
 }
 
-class Browser1{
-	Browser1(){}
-	Browser1(ArrayList<String> st){}
-	private String url;
-	private static ArrayList<String> arrayOfurls = 
-			new ArrayList<String>();
-	
-	void setVisited(String site) {
-		url = site;
-		arrayOfurls.add(url);
-	}
-	
-	void getVisited() {
-		System.out.println(arrayOfurls);
-	}
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
