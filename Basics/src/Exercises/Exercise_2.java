@@ -15,7 +15,6 @@ public class Exercise_2 {
 }
 
 abstract class Shape{
-	public int x,y;
 	public double getArea() {
 		return 0;
 	}
