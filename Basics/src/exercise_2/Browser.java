@@ -1,4 +1,4 @@
-package exercise_3;
+package exercise_2;
 
 public class Browser {
 	private static String[] visited_urls = new String[10];

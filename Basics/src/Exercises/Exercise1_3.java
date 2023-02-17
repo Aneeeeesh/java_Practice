@@ -2,7 +2,7 @@ package Exercises;
 import java.util.*;
 
 
-public class Exercise_2 {
+public class Exercise1_3 {
 	public static void main(String[] args) {
 		Shape s1 ;
 		s1 = new Rectangle(5,10);
