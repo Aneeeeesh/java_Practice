@@ -5,17 +5,21 @@ import java.util.ArrayList;
 public class OtherBrowsers {
 	public static void main(String[] args) {
 		int countChrome = 0;
+		String[] stringArray = {"hello", "bye"};
 		Browser tabOne= new GoogleChrome();
 		Browser tabTwo= new Firefox();
 		Browser tabThree= new Firefox();
-		Browser tabFour= new GoogleChrome();
+		Browser tabFour= new GoogleChrome(stringArray);
 		Browser tabFive= new GoogleChrome();
+		GoogleChrome tabSix = new GoogleChrome();
 		
 		for (int i = 0; i<Browser.allBrowsers.length; i++) {
 			if(Browser.allBrowsers[i] instanceof GoogleChrome) {
 				countChrome++;
+//				Browser.allBrowsers[i].whoAmI();
 			}
 		}
+		
 		System.out.println(countChrome);
 	}
 }
@@ -23,20 +27,21 @@ public class OtherBrowsers {
 
 class GoogleChrome extends Browser{
 	
-	private static final double versionNumber = 1.0;
+	private static final double versionNumber = 1.0;		//value cannot be changed once initialized 
 	private static boolean isLocationAccessible,
 		isCameraAccessible, isMicrophoneAccessible;
 	
 	
 	public GoogleChrome() {
-		 super();
+		 super();											//super keyword calls the parent class constructor
 	 }
+	
 	public GoogleChrome(String[] sites) {
 		super(sites);
 	}
 	
 	@Override
-	public void whoAmI() {
+	public void whoAmI() {												//method overriding
 		System.out.println("I am Google Chrome.");
 	}
 	
@@ -45,7 +50,7 @@ class GoogleChrome extends Browser{
 		isMicrophoneAccessible = allPermission;
 	}
 	
-	public void setPermissions(String field ,boolean permission) {
+	public void setPermissions(String field ,boolean permission) {		//method overloading
 		switch(field) {
 		case "camera": isCameraAccessible = permission;
 						break;
