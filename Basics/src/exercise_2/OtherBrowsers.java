@@ -67,6 +67,8 @@ class GoogleChrome extends Browser{
 
 class Firefox extends Browser implements MultipleAccountContainers{
 	
+	public static ArrayList<String> containers = new ArrayList<String>();
+	
 	public Firefox() {
 		super();
 	}
@@ -79,16 +81,18 @@ class Firefox extends Browser implements MultipleAccountContainers{
 	public void whoAmI() {
 		System.out.println("I am Firefox.");
 	}
-
+	
 	@Override
-	public void addContainer() {
-		// TODO Auto-generated method stub
-		
+	public void addContainer(String container) {
+		containers.add(container);
 	}
-
+	
 	@Override
-	public void leaveContainer() {
-		// TODO Auto-generated method stub
-		
+	public void leaveContainer(String container) {
+		for(String i : containers) {
+			if(i.equals(container)) {
+				containers.remove(i);
+			}
+		}
 	}
 }
