@@ -1,4 +1,4 @@
-package Exercises;
+package exercise_1;
 import java.util.*;
 
 
@@ -26,6 +26,7 @@ class Rectangle extends Shape{
 		this.width = width;
 		this.length = length;
 	}
+	@Override
 	public double getArea() {
 		return width*length;
 	}
@@ -37,6 +38,7 @@ class Circle extends Shape{
 	public Circle(int radius) {
 		this.radius = radius;
 	}
+	@Override
 	public double getArea() {
 		return pi*radius*radius;
 	}
@@ -48,6 +50,7 @@ class Triangle extends Shape{
 		this.base = base;
 		this.height = height;
 	}
+	@Override
 	public double getArea() {
 		return 0.5*base*height;
 	}
