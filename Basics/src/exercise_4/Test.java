@@ -13,8 +13,10 @@ public class Test {
 		browser.setHistory("www.twitter.com");
 		browser.setHistory("www.google.com");
 		browser.setHistory("www.fb.com");
+		browser.setHistory("www.fb.com");
 		
 		for(int i = 0 ; i< Browser.browserHistory.length;i++) {
+			
 			if(Browser.browserHistory[i] != null)
 				System.out.println(Browser.browserHistory[i]);
 		}
