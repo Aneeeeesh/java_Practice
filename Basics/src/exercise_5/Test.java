@@ -9,22 +9,23 @@ public class Test {
 		
 		//instantiating member inner class
 		Browser.Bookmarks bookmarks = browser1.new Bookmarks();
-		bookmarks.show();
+		bookmarks.showMsg();
 		
 		
 		//anonymous inner class
 		Browser shortcuts = new Browser() {
+			
 			static String[] shortcuts = new String[5];
 			
-			@Override
-			void show() {
+			void showMsg() {
 				System.out.println("This is the Shortcuts class");
 			}
 		};
-		shortcuts.show();
+		shortcuts.showMsg();
+//		browser1.showMsg();
 		
 		//calling static inner class method show()
-		Browser.History.show();
+		Browser.History.showMsg();
 
 		}
 	}
