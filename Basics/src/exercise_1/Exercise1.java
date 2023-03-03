@@ -3,16 +3,16 @@ package exercise_1;
 public class Exercise1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Browser a = new Browser();
-		a.setVisited("www.google.com");
-		a.setVisited("www");
-		a.getVisited();
+		Browser chrome = new Browser();
+		chrome.setVisited("google");
+		chrome.setVisited("www");
+		chrome.getVisited();
 		String[] st = {"fb","insta","linked"};
-		Browser b = new Browser(st);
-		b.getVisited();
-		Browser c = new Browser();
-		c.setVisited("twitt");
-		c.getVisited();
+		Browser opera = new Browser(st);
+		opera.getVisited();
+		Browser brave = new Browser();
+		brave.setVisited("twitt");
+		brave.getVisited();
 	}
 }
 
@@ -46,8 +46,5 @@ class Browser {
 		}
 	}
 	
-	void whoAmI() {
-		System.out.println("I am a browser.");
-	}
 }
 	
