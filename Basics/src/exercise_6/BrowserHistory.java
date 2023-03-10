@@ -36,9 +36,6 @@ public class BrowserHistory {
 			System.out.println(e);
 		}
 		
-		catch(Exception e) {
-			System.out.println("Invalid url extension");
-		}
 	}
 	
 	String back(int steps) {
