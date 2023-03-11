@@ -19,8 +19,10 @@ public class BrowserHistory {
 		try {
 			
 			StringTokenizer tokenizer = new StringTokenizer(url, ".");
-			String domain = tokenizer.nextToken();
 			
+			if(tokenizer.countTokens()<=1) throw new InvalidURLException("Invalid url extension");
+			
+			String domain = tokenizer.nextToken();
 			while(tokenizer.hasMoreTokens())
 				domain = tokenizer.nextToken();
 			
