@@ -45,7 +45,7 @@ public class BrowserHistory {
 			currentPageIndex = history.indexOf(currentPage);
 			if(steps < currentPageIndex+1) {
 				currentPage = history.get(currentPageIndex - steps);
-				return currentPage;
+				return "";
 			}
 			
 			else throw new NoHistoryFoundException("No History Found");
@@ -63,7 +63,7 @@ public class BrowserHistory {
 			currentPageIndex = history.indexOf(currentPage);
 			if(steps <= history.size()-(currentPageIndex+1)) {
 				currentPage = history.get(currentPageIndex + steps);
-				return currentPage;
+				return "";
 			}
 			
 			else throw new NoHistoryFoundException("No History Found");
