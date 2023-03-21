@@ -50,7 +50,7 @@ public class BrowserHistory {
 		linkedHashMap.remove(delExtension);
 		hashMap.remove(delExtension);
 		treeMap.remove(delExtension);
-		System.out.println(linkedHashMap);
+//		System.out.println(linkedHashMap);
 	}
 	
 	void size(String extension) {
