@@ -1,4 +1,4 @@
-package Practice.Inheritance.Abstraction;
+package Practice.Abstraction;
 
 //import Practice.Inheritance.*;
 

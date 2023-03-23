@@ -1,4 +1,4 @@
-package Practice.Inheritance;
+package Practice.Inheritance1;
 
 public class test {
 	public static void main(String[] args) {

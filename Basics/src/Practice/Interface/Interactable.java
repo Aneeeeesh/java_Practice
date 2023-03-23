@@ -1,4 +1,4 @@
-package Practice.Inheritance.Interface;
+package Practice.Interface;
 
 public interface Interactable {				//interface can only have declarations
 	public final String name = "A";			//fields in interface must be final 
