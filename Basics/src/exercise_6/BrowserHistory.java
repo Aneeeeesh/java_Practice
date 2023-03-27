@@ -55,6 +55,7 @@ public class BrowserHistory {
 			currentPage = history.get(0);
 			return e.toString();
 		}
+		
 
 	}
 	
