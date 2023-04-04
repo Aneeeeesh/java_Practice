@@ -8,10 +8,9 @@ public class Reflection {
 
 	public static void main(String[] args) throws Exception {
 			
-			Dog dog1 = new Dog("Lucky" , 2);
+			Dog dog1 = new Dog("Rolex" , 2);
 			Dog dog2 = new Dog("Bruno" , 8);
 			Class c = Dog.class;
-//			System.out.println(dog.getClass());
 			
 			Field[] dogFields1 = dog1.getClass().getDeclaredFields(); //shows all fields except inherited  fields
 //			for(Field field : dogFields1) {
@@ -23,7 +22,7 @@ public class Reflection {
 //				System.out.println(field.get(dog1));
 //				System.out.println(field.get(dog2));
 //			}
-			
+
 			
 			Field[] dogFields2 = dog1.getClass().getFields();		// shows only public fields
 //			for(Field field : dogFields2) {
@@ -60,6 +59,10 @@ public class Reflection {
 //			for(Method method : dogMethods2) {
 //				System.out.println(method.getName());
 //			}
+
+            Method dogMethod = 
+					dog1.getClass().getDeclaredMethod("sleep",int.class);
+			dogMethod.invoke(dog1,6);
 			
 			Constructor[] dogConstructors = dog1.getClass().getDeclaredConstructors();
 //			for(Constructor construct : dogConstructors) {
@@ -80,11 +83,12 @@ class Dog{
 		this.age = age;
 	}
 	
+	 
 	public void bark() {
 		System.out.println("Bark! Bark!");
 	}
 	
-	void sleep(int time) {
+	void sleep(int duration) {
 		
 	}
 	
