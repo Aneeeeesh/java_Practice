@@ -1,0 +1,7 @@
+google.com
+fb.com
+insta.com
+zoho.com
+apple
+orange
+banana
