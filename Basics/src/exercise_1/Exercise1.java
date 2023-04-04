@@ -4,14 +4,14 @@ public class Exercise1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Browser chrome = new Browser();
-		chrome.setVisited("google");
-		chrome.setVisited("www");
+		chrome.setVisited("google.com");
+		chrome.setVisited("zoho.com");
 		chrome.getVisited();
-		String[] st = {"fb","insta","linked"};
+		String[] st = {"fb.com","insta.com","linkedin.com"};
 		Browser opera = new Browser(st);
 		opera.getVisited();
 		Browser brave = new Browser();
-		brave.setVisited("twitt");
+		brave.setVisited("twitter.in");
 		brave.getVisited();
 	}
 }
