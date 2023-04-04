@@ -7,7 +7,7 @@ public class Browser {
 	public int t = 0;
 	
 	
-	Browser() {													//to add object to array whenever it is instantiated
+	public Browser() {													//to add object to array whenever it is instantiated
 		for(int i = 0; i<allBrowsers.length; i++) {
 			if (allBrowsers[i] == null){
 				allBrowsers[i] = this;
@@ -17,7 +17,7 @@ public class Browser {
 	}
 	
 	
-	Browser(String[] sites){
+	public Browser(String[] sites){
 		this();													//to add object with array argument to array allBrowsers
 		for (int i = 0 ; i< visited_urls.length ; i++) {
 			if (t==sites.length) break;
