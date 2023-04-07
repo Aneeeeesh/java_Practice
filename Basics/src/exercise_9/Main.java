@@ -9,8 +9,8 @@ public class Main {
 		
 		Browser browser1 = new Browser();
 		
-		Read read = new Read(browser1);
-		Delete del = new Delete(browser1);
+//		Read read = new Read(browser1);
+//		Delete del = new Delete(browser1);
 		
 //		read.start();
 //		del.start();
@@ -34,10 +34,18 @@ public class Main {
 						browser1.addHistory(input);
 						continue;
 			
-			case "2" :  read.start();
+			case "2" :  Read read = new Read(browser1);
+						Delete del = new Delete(browser1);
+						read.start();
+						try { read.join(); } catch(Exception e) {}
 						del.start();
+						try { del.join(); } catch(Exception e) {}
+						continue;
+					
+			case "exit" : break;
 			
 			}
+			break;
 		}	
 
 	}

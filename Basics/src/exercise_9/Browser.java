@@ -10,6 +10,7 @@ public class Browser {
 	
 	void addHistory(String url) {
 		history.add(url);
+		System.out.println("Added url.");
 	}
 	
 	void readHistory() {
@@ -19,7 +20,9 @@ public class Browser {
 	}
 	
 	void deleteHistory() {
-		history.remove(history.size()-1);
+		int last = history.size();
+		System.out.println("Deleted " + history.get(last -1));
+		history.remove(last-1);
 	}
 }
 
