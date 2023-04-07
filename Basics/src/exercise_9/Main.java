@@ -37,9 +37,11 @@ public class Main {
 			case "2" :  Read read = new Read(browser1);
 						Delete del = new Delete(browser1);
 						read.start();
-						try { read.join(); } catch(Exception e) {}
 						del.start();
-						try { del.join(); } catch(Exception e) {}
+						try { 
+							read.join();
+							del.join(); 
+							} catch(Exception e) {}
 						continue;
 					
 			case "exit" : break;
