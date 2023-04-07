@@ -8,25 +8,18 @@ public class Browser {
 	
 	static List<String> history = new ArrayList<>(Arrays.asList("google.com", "insta.com", "linkedin.com"));
 	
-	static void addHistory(String url) {
+	void addHistory(String url) {
 		history.add(url);
 	}
 	
-}
-
-class Read extends Browser implements Runnable{
-	
-	@Override
-	public void run() {
-		
-		System.out.println(history);
+	void readHistory() {
+		for(int i = 0; i < history.size() ; i++) {
+			System.out.println(history.get(i));
+		}
 	}
-}
-
-class Delete extends Browser implements Runnable{
 	
-	@Override
-	public void run() {
+	void deleteHistory() {
 		history.remove(history.size()-1);
 	}
 }
+
